@@ -1,0 +1,104 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://4mtrasportes.com.br/script-video/all_script.js"></script>
+<div class="video-wrapper" data-title="cf-vimeo-video">
+  <div class="elVideo">
+    <div class="fluid-width-video-wrapper">
+      <iframe
+        allow="autoplay"
+        src="https://player.vimeo.com/video/648347219?muted=1&amp;autoplay=1&amp;&amp;title=0&amp;byline=0&amp;wmode=transparent&amp;autopause=0"
+        frameborder="0"
+        allowfullscreen=""
+        wmode="opaque"
+      ></iframe>
+      <style>
+        .video-wrapper {
+          border: 0px !important;
+          -webkit-box-shadow: 0px 4px 43px 0px rgba(0, 0, 0, 0.6) !important;
+          -moz-box-shadow: 0px 4px 43px 0px rgba(0, 0, 0, 0.6) !important;
+          box-shadow: 0px 4px 43px 0px rgba(0, 0, 0, 0.6) !important;
+          margin-top: 0px;
+          outline: none;
+          cursor: pointer;
+        }
+        .elVideo {
+          position: relative;
+          overflow: hidden;
+        }
+        .fluid-width-video-wrapper {
+          width: 100%;
+          position: relative;
+          padding: 0;
+          padding-top: 56.25%;
+        }
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .elVideo iframe {
+          z-index: 3;
+        }
+        .iframeBlocker,
+        .iframeUnmute {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          width: 100%;
+          z-index: 5;
+        }
+        .video-sound-overlay {
+          width: 100%;
+          height: 100%;
+          background-image: url(//cfprotools.com/hosted/images/35/663790d4c411e899cbf7997697a31b/big-play-button.png);
+          background-repeat: no-repeat;
+          position: absolute;
+          left: 0%;
+          right: 0%;
+          top: 0%;
+          bottom: 0%;
+          margin: auto;
+          background-size: 20%;
+          background-position: center;
+        }
+        .video-sound-overlay img {
+          width: 18%;
+          padding: 10px;
+          position: absolute;
+          margin-top: 60px;
+          margin-left: 10px;
+          animation: pulseScale 2s infinite;
+          animation-timing-function: ease-out;
+        }
+
+        @keyframes pulseScale {
+          80% {
+            transform: scale(1.1);
+          }
+        }
+
+        .video-sound-overlay .play-button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -100px;
+          margin-top: -100px;
+        }
+
+        @media only screen and (max-width: 770px) and (min-width: 0px) {
+          .iframeBlocker {
+            display: block !important;
+          }
+
+          .unmute-button img {
+            width: 35%;
+          }
+        }
+      </style>
+    </div>
+  </div>
+</div>
